@@ -4,7 +4,7 @@ import Spinner from '../ui/Spinner';
 
 const CharacterGrid = ({ items, isLoading }) => {
   return isLoading ? (
-    <Spinner />
+    <h1 style={{ textAlign: 'center' }}>Loading...</h1>
   ) : (
     <section className='cards'>
       {items.map((item) =>
@@ -13,7 +13,6 @@ const CharacterGrid = ({ items, isLoading }) => {
           <CharacterItem key={item.id} item={item}></CharacterItem>
         ) : null
       )}
-      ;
     </section>
   );
 };
